@@ -324,6 +324,12 @@ section .text + .text {
 	margin: 75px auto 0;
 }
 @media screen and (min-width: 800px) {
+	.screen-5 .text {
+		max-width: 500px;
+	}
+	.screen-5 .img-container {
+		margin-right: -30px;
+	}
 	.img-container {
 		margin-left: 32px;
 	}
@@ -580,9 +586,6 @@ section .text + .text {
 	height: 40px;
 }
 @media screen and (min-width: 800px) {
-	.screen-5 .text {
-		max-width: 500px;
-	}
 	.companies-logo-grid {
 		display: flex;
 		flex-wrap: wrap;
