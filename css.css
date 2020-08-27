@@ -116,6 +116,21 @@ section {
 	max-width: 700px;
 	margin: 0 0 50px;
 }
+.screen-4,
+.screen-6,
+.screen-7,
+.screen-8 {
+	text-align: center;
+}
+.screen-4 .screen-title,
+.screen-6 .screen-title,
+.screen-7 .screen-title,
+.screen-8 .screen-title {
+	width: auto;
+	max-width: none;
+	margin-left: auto;
+	margin-right: auto;
+}
 section .text + .text {
 	margin-top: 30px;
 }
@@ -297,17 +312,8 @@ section .text + .text {
 }
 
 /* Экран 6 */
-.screen-4,
-.screen-6,
-.screen-7,
-.screen-8 {
-	text-align: center;
-}
-.screen-4 .screen-title,
-.screen-6 .screen-title,
-.screen-7 .screen-title,
-.screen-8 .screen-title {
-	width: auto;
+.screen-6 .screen-title {
+	max-width: 13em;
 }
 .screen-6 .screen-title span {
 	color: #8184EB;
@@ -707,7 +713,7 @@ section .text + .text {
 		margin: 0.5em auto;
 	}
 	#job-market {
-		margin: 36px auto;
+		margin: 32px auto 36px;
 		display: block;
 	}
 	/* Экран 3 */
@@ -751,7 +757,11 @@ section .text + .text {
 	}
 	.time-blocks-container::before,
 	.time-blocks-container::after {
-		transform: rotate(90deg) scaleX(0.6) scaleY(1.5);
+		width: 30px;
+		margin: 20px;
+		background-position-x: right;
+		background-size: auto;
+		transform: rotate(90deg);
 	}
 	/* Экран 5 */
 	.screen-5 .text {
@@ -786,13 +796,13 @@ section .text + .text {
 	}
 	.screen-6 a.button {
 		margin-top: 6px;
-		padding-top: 16px;
-		padding-bottom: 16px;
+		padding-top: 12px;
+		padding-bottom: 12px;
+		font-size: 19px;
 		font-weight: normal;
-		border-radius: 32px;
+		line-height: 1.35;
+		border-radius: 100px;
 	}
-}
-@media screen and (max-width: 799px) {
 	/* Экран 7 */
 	.slider {
 		margin: 36px -32px 0;
@@ -906,19 +916,54 @@ section .text + .text {
 		right: 19px;
 	}
 	/* Экран 9 */
+	.screen-9 {
+		padding-left: 50px;
+		padding-right: 50px;
+	}
 	.screen-9 .screen-title {
 		text-align: center;
 		margin-bottom: 40px;
 	}
+	.companies-logo-grid {
+		display: flex;
+		flex-flow: column;
+		margin-top: 50px;
+		padding: 20px 0 50px;
+		border-top: 1px solid rgba(50, 50, 50, 0.1);
+		border-bottom: 1px solid rgba(50, 50, 50, 0.1);
+	}
+	.companies-logo-grid .cell:nth-last-child(2) {
+		order: 1;
+	}
 	.companies-logo-grid .cell {
-		height: 16vh;
-		min-height: 100px;
+		height: 13vh;
+		min-height: 80px;
+	}
+	.companies-logo-grid .logo--malikspace {
+		width: 180px;
+		height: 44px;
+	}
+	.companies-logo-grid .logo--modulbank {
+		width: 190px;
+		height: 32px;
+	}
+	.companies-logo-grid .logo--burservice {
+		width: 190px;
+		height: 23px;
+	}
+	.companies-logo-grid .logo--profisoft {
+		width: 180px;
+		height: 42px;
 	}
 	.companies-logo-grid .logo--likato {
-		margin-top: -10px;
+		margin-top: 4px;
+		width: 120px;
+		height: 120px;
 	}
 	.companies-logo-grid .logo--units {
-		margin-top: 36px;
+		width: 180px;
+		height: 66px;
+		margin-top: 18px;
 	}
 	/* Экран 10 */
 	.screen-10 {
@@ -968,9 +1013,6 @@ section .text + .text {
 	}
 	.screen-5 .text {
 		max-width: 16.6em;
-	}
-	.screen-6 a.button {
-		border-radius: 16px;
 	}
 	.screen-6 .info-blocks .block {
 		margin-bottom: 16px;
